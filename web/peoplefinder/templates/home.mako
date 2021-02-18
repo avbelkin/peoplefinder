@@ -15,10 +15,10 @@
 <div id="home">
     <div class="container">
         <div class="row margin-top-10 margin-bottom-10">
-            <div class="col-md-8">
+            <div class="col-xs-12 col-md-8 col-lg-12">
                 <div id="map"></div>
             </div>
-            <div id="rightPanel" class="col-md-4">
+            <div id="rightPanel" class="col-xs-12 col-md-4 col-lg-12">
                 <div class="row">
                     <span class="text-uppercase sub-header">Tracking</span>
                     <div class="inner-row">
