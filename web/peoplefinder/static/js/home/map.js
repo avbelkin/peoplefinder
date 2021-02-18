@@ -31,7 +31,7 @@
 
 
         setInitialView: function () {
-            this._map.setView([-26.017, 139.219], 4);
+            this._map.setView([60, 30], 6);
         }
     });
 }(jQuery, pf, L));
