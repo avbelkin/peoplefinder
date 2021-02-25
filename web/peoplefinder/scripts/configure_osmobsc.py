@@ -47,7 +47,7 @@ def main(argv=sys.argv):
         tn.read_until("OpenBSC(config-smpp-esme)#", 5)
 
         tn.write("write file\n")
-        tn.read_until("OpenBSC(config-smpp)#", 5)
+        tn.read_until("OpenBSC(config-smpp-esme)#", 5)
 
         print "Configuration smpp SUCCSESS!"
 
