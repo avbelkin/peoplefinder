@@ -45,9 +45,24 @@ def main(argv=sys.argv):
 
         tn.write("default-route\n")
         tn.read_until("OpenBSC(config-smpp-esme)#", 5)
-
+        
+        tn.write("exit\n")
+        tn.read_until("OpenBSC(config)#",5)
+        
+        tn.write("network\n")
+        tn.read_until("OpenBSC(config-net)#",5)
+        
+        tn.write("bts 0\n")
+        tn.read_until("OpenBSC(config-net-bts)#",5)
+        
+        tn.write("cell reselection hysteresis 14\n")
+        tn.read_until("OpenBSC(config-net-bts)#",5)
+        
+        tn.write("cell reselection offset 126\n")
+        tn.read_until("OpenBSC(config-net-bts)#",5)
+        
         tn.write("write file\n")
-        tn.read_until("OpenBSC(config-smpp-esme)#", 5)
+        tn.read_until("OpenBSC(config-net-bts)#", 5)
 
         print "Configuration smpp SUCCSESS!"
 
