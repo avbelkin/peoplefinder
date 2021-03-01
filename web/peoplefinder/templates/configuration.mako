@@ -29,6 +29,31 @@
 
                 <form action="${request.route_url('configuration')}" method="POST">
                     <div class="form-group">
+                        <label for="mcc">Mobile Country Code</label>
+                        <input type="number" class="form-control" name="mobileCountryCode" id="mobileCountryCode"
+                               value="${mobileCountryCode}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="mnc">Mobile Newtork Code</label>
+                        <input type="number" class="form-control" name="mobileNetworkCode" id="mobileNetworkCode"
+                               value="${mobileNetworkCode}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="cell_id">Cell Identity</label>
+                        <input type="number" class="form-control" name="cellIdentity" id="cellIdentity"
+                               value="${cellIdentity}"/>
+                    </div>         
+                    <div class="form-group">
+                        <label for="lac">Location Area Code (LAC)</label>
+                        <input type="number" class="form-control" name="locationAreaCode" id="locationAreaCode"
+                               value="${locationAreaCode}"/>
+                    </div>
+                     <div class="form-group">
+                        <label for="bs_id">Base station id code</label>
+                        <input type="number" class="form-control" name="baseStationIdCode" id="baseStationIdCode"
+                               value="${baseStationIdCode}"/>
+                    </div>    
+                    <div class="form-group">
                         <label for="welcome">Welcome message</label>
                         <input type="text" class="form-control" name="welcomeMessage" id="welcomeMessage"
                                value="${welcomeMessage}"/>
