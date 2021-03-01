@@ -31,7 +31,7 @@ def configuration_get(request):
 
 
 def configuration_post(request):
-    for setting in ('imsiUpdate', 'smsUpdate', 'silentSms',
+    for setting in ('mobileCountryCode','mobileNetworkCode','cellIdentity','locatonAreaCode','baseStationIdCode', 'imsiUpdate', 'smsUpdate', 'silentSms',
                     'welcomeMessage', 'replyMessage'):
         obj = DBSession.query(Settings).filter_by(name=setting).one()
         obj.value = request.POST.get(setting)
