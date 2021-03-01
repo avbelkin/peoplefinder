@@ -52,13 +52,23 @@ def main(argv=sys.argv):
         tn.write("network\n")
         tn.read_until("OpenBSC(config-net)#",5)
         
+        tn.write("network country code 250\n")
+        tn.read_until("OpenBSC(config-net)#",5)
+        tn.write("mobile network code 66\n")
+        tn.read_until("OpenBSC(config-net)#",5)
+        
         tn.write("bts 0\n")
         tn.read_until("OpenBSC(config-net-bts)#",5)
         
         tn.write("cell reselection hysteresis 14\n")
         tn.read_until("OpenBSC(config-net-bts)#",5)
-        
         tn.write("cell reselection offset 126\n")
+        tn.read_until("OpenBSC(config-net-bts)#",5)
+        tn.write("cell_identity 0\n")
+        tn.read_until("OpenBSC(config-net-bts)#",5)
+        tn.write("location_area_code 1\n")
+        tn.read_until("OpenBSC(config-net-bts)#",5)
+        tn.write("base_station_id_code 63\n")
         tn.read_until("OpenBSC(config-net-bts)#",5)
         
         tn.write("write file\n")
